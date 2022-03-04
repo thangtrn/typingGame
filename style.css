@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 300% 300%;
+  animation: gradient 10s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.content-box {
+  width: 840px;
+}
+.typing-display {
+  height: 110px;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #2cccff;
+}
+.typing-display div {
+  position: relative;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+}
+.typing-display p {
+  font-size: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  color: #000;
+  transform: translateY(0px);
+}
+.typing-display p span {
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+
+.typing-display p .highlight {
+  background-color: #ddd;
+}
+.typing-display p .highlight-wrong {
+  background-color: red;
+}
+.typing-display p .correct {
+  color: green;
+}
+.typing-display p .incorrect {
+  color: red;
+  text-decoration: underline;
+}
+.controls {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input-form {
+  width: 650px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.input-field {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+.reload-btn {
+  display: block;
+  outline: none;
+  font-size: 20px;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  background-color: #23d5ab;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+.reload-btn:active {
+  filter: brightness(0.8);
+}
+.time-left {
+  font-weight: bold;
+  width: 72px;
+  text-align: center;
+  background-color: #3c4d5c;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+.wpm-tag {
+  margin-top: 10px;
+}
+.wpm-tag,
+.correct-tag,
+.incorrect-tag {
+  color: #fff;
+  text-shadow: 2px 2px #333;
+}
